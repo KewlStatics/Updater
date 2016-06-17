@@ -119,6 +119,8 @@ global.Punishments = require('./punishments.js');
 
 global.Rooms = require('./rooms.js');
 
+global.Db = require('lightningdb')('config/userdb');
+
 delete process.send; // in case we're a child process
 global.Verifier = require('./verifier.js');
 Verifier.PM.spawn();
